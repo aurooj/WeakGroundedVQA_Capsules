@@ -11,7 +11,7 @@ We use two datasets in this work: **GQA** and **CLEVR-Answers**
 CLEVR-Answers is an extended version of [CLEVR](https://cs.stanford.edu/people/jcjohns/clevr/) dataset for evaluation on answer grounding task. 
 We used the [CLEVR dataset generation framework](https://github.com/facebookresearch/clevr-dataset-gen/blob/master/question_generation/README.md) to generate new questions with the bounding box labels for the answers. Each data sample now consists of question, image, answer label and bounding box labels for answer objects.
 We provide these labels for CLEVR training and validation sets. 
-We call this dataset **CLEVR-Answers** and can be downloaded from [here](https://1drv.ms/u/s!AtxSFigVVA5JhPUKPZp63LdqAmhwUg?e=oTufq7).
+We call this dataset **CLEVR-Answers** and can be downloaded from [here](https://1drv.ms/u/s!AtxSFigVVA5JhPUP9Pb7xcBFQ5m7rQ?e=wQuzf7).
 
 Following is the file structure for CLEVR-Answers:
 ```
@@ -22,6 +22,10 @@ CLEVR_Answers
 |____CLEVR_val_question2bboxes.json
 
 ```
+To have a standard train-val-test setup, we separate 1K training images with 10K question-answer pairs for validation of hyperparameters. We call this set "train-val".
+The original validation set is used as test set in all our experiments.
+
+The split of training data into "new-train" and "train-val" is provided [here](https://1drv.ms/u/s!AtxSFigVVA5JhPUQa3fKWdCKZFcyWA?e=x8ryKH).
 todo: add file format description
 
 Code and details coming soon...
