@@ -22,6 +22,7 @@ CLEVR_Answers
 |____CLEVR_val_question2bboxes.json
 
 ```
+todo: add file format description
 
 Code and details coming soon...
 
