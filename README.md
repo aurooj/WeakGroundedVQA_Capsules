@@ -28,6 +28,20 @@ The original validation set is used as test set in all our experiments.
 The split of training data into "new-train" and "train-val" is provided [here](https://1drv.ms/u/s!AtxSFigVVA5JhPUQa3fKWdCKZFcyWA?e=x8ryKH).
 todo: add file format description
 
+#### GQA
+GQA dataset can be downloaded from [here](https://cs.stanford.edu/people/dorarad/gqa/download.html). 
+We used the balanced version of GQA for our experiments. 
+GQA provides the bounding box annotations for both question and answer objects. We evaluate grounding on this dataset for different grounding ground truths: Question (Q), full answer (FA), short answer (A), and both question and answer objects (All). The bboxes information for each groundtruth type is saved in the same format as CLEVR-Answers. These files can be downloaded from this [link](https://1drv.ms/u/s!AtxSFigVVA5JhPUVHmUpAC7oI7wE5A?e=BX9sLA).
+
+Following is the file structure for GQA:
+```
+GQA
+|____gqa_val_all_question2bboxes.json
+|____gqa_val_answer_question2bboxes.json
+|____gqa_val_fullAnswer_question2bboxes.json
+|____gqa_val_question_question2bboxes.json
+
+```
 Code and details coming soon...
 
 ### Citation
