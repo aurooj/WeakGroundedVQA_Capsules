@@ -65,7 +65,7 @@ Code and details coming soon...
 ### Citation
 If this work and/or dataset is useful for your research, please cite our paper.
 
-
-
+### Questions?
+Please contact 'aishaurooj@gmail.com'
 
 
