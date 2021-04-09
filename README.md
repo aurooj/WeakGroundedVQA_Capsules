@@ -1,4 +1,4 @@
-# Found a Reason for me? Found a Reason for me? Weakly-supervised Grounded Visual Question Answering using Capsules [CVPR2021]
+# Found a Reason for me? Weakly-supervised Grounded Visual Question Answering using Capsules [CVPR2021]
 
 ## Abstract
 The problem of grounding VQA tasks has seen an increased attention in the research community recently, with most attempts usually focusing on solving this task by using pretrained object detectors which require bounding box annotations for detecting relevant objects in the vocabulary, which may not always be feasible for real-life large-scale applications.
