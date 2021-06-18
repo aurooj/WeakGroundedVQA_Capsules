@@ -61,6 +61,18 @@ MAC network was trained on both [CLEVR-Answers](https://github.com/stanfordnlp/m
 ### MAC-Caps
 Code for MAC-Caps is shared under directory `mac-capsules`. We report our best results on GQA with 32 capsules. 
 
+#### download GQA features
+
+`cd data`
+
+`wget http://nlp.stanford.edu/data/gqa/spatialFeatures.zip`
+
+`unzip spatialFeatures.zip`
+
+`cd ../`
+
+`python merge.py --name spatial `
+
 Code and details coming soon...
 
 ### Citation
