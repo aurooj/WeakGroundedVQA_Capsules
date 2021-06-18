@@ -63,15 +63,13 @@ Code for MAC-Caps is shared under directory `mac-capsules`. We report our best r
 
 #### download GQA features
 
-`cd data`
-
-`wget http://nlp.stanford.edu/data/gqa/spatialFeatures.zip`
-
-`unzip spatialFeatures.zip`
-
-`cd ../`
-
-`python merge.py --name spatial `
+```
+cd data
+wget http://nlp.stanford.edu/data/gqa/spatialFeatures.zip
+unzip spatialFeatures.zip
+cd ../
+python merge.py --name spatial 
+```
 
 Code and details coming soon...
 
