@@ -78,7 +78,7 @@ Code and details coming soon...
 ### Citation
 If this work and/or dataset is useful for your research, please cite our paper.
 
-`bibtex
+```bibtex
 @InProceedings{Urooj_2021_CVPR,
     author    = {Urooj, Aisha and Kuehne, Hilde and Duarte, Kevin and Gan, Chuang and Lobo, Niels and Shah, Mubarak},
     title     = {Found a Reason for me? Weakly-supervised Grounded Visual Question Answering using Capsules},
@@ -86,7 +86,8 @@ If this work and/or dataset is useful for your research, please cite our paper.
     month     = {June},
     year      = {2021},
     pages     = {8465-8474}
-}`
+}
+```
 
 ### Questions?
 Please contact 'aishaurooj@gmail.com'
