@@ -6,8 +6,10 @@ In this paper, we focus on a more relaxed setting: the grounding of relevant vis
 
 [[Paper](https://www.crcv.ucf.edu/wp-content/uploads/2018/11/Found-a-Reason-for-me.pdf)] [[Supplementary](https://www.crcv.ucf.edu/wp-content/uploads/2018/11/Found-a-Reason-for-me_Supp.pdf)] [[Presentation Video]()]
 
-!### Qualitative Results
+<!---
+### Qualitative Results
 !to be added.
+--->
 
 
 ### Requirements
