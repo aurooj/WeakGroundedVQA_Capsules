@@ -58,7 +58,8 @@ GQA
 We integrate our capsule module into two baselines: SNMN and MAC. 
 MAC network was trained on both [CLEVR-Answers](https://github.com/stanfordnlp/mac-network/tree/master) and [GQA](https://github.com/stanfordnlp/mac-network/tree/gqa) datasets.
 
-
+### MAC-Caps
+Code for MAC-Caps is shared under directory `mac-capsules`. We report our best results on GQA with 32 capsules. 
 
 Code and details coming soon...
 
