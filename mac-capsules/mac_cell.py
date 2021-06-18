@@ -219,19 +219,7 @@ class MACCell(tf.nn.rnn_cell.RNNCell):
             dim = config.memDim
             interDim = dim
             ## mask
-            _, d = control.get_shape().as_list()
-            control_ = ops.linear(control, inDim=d, outDim=dim, 
-                                  name='control_linear')  # out dim is dim based on capsules
-            mask_logits = ops.linear(control_, inDim=dim, outDim=config.NUM_VIS_CAPS_L2,
-                                     name='mask_linear')  # position aware mask
-
-            mask = tf.nn.softmax(mask_logits, axis=-1)
-            print('inside read...')
-            print(knowledgeBase.shape)
-            # print(mask.shape)
-            knowledgeBase = tf.concat(knowledgeBase, axis=-1)
-            attnknowledgeBase = knowledgeBase * mask[:, ax, ax, :, ax]
-            knowledgeBase = reshape_vis_caps_spatial2(attnknowledgeBase)  # B,H,W, C*17
+            knowledgeBase = self.queryFocusedSoftmasking(control, dim, knowledgeBase)
 
             ## memory dropout
             if config.memoryVariationalDropout:
@@ -301,7 +289,30 @@ class MACCell(tf.nn.rnn_cell.RNNCell):
             # sum up the knowledge base according to the distribution
             information = ops.att2Smry(attention, knowledgeBase)
 
-        return information 
+        return information
+
+    def queryFocusedSoftmasking(self, control, dim, knowledgeBase):
+        #this function generates a control (query) based soft mask and returns masked capsules as output.
+        #knowledgeBase is visual capsules here
+        _, d = control.get_shape().as_list()
+        control_ = ops.linear(control, inDim=d, outDim=dim,
+                              name='control_linear')  # out dim is dim based on capsules
+        #mask generation
+        mask_logits = ops.linear(control_, inDim=dim, outDim=config.NUM_VIS_CAPS_L2,
+                                 name='mask_linear')  # position aware mask
+        mask = tf.nn.softmax(mask_logits, axis=-1)
+
+        # print('inside read...')
+        # print(knowledgeBase.shape)
+        # print(mask.shape)
+
+        #apply mask to capsules
+        knowledgeBase = tf.concat(knowledgeBase, axis=-1)
+        attnknowledgeBase = knowledgeBase * mask[:, ax, ax, :, ax]
+
+        #reshaping visual capsules
+        knowledgeBase = reshape_vis_caps_spatial2(attnknowledgeBase)  # B,H,W, C*17
+        return knowledgeBase
 
     '''
     The write unit integrates newly retrieved information (from the read unit),
