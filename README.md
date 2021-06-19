@@ -28,7 +28,7 @@ conda create --name tf15 python=3.6
 conda activate tf15
 pip install -r requirements.txt
 ```
---->
+We build upon [SNMN](https://github.com/ronghanghu/snmn) and [MAC](https://github.com/stanfordnlp/mac-network/tree/master) and thank them to provide awesome code repos. 
 ### Datasets
 We use two datasets in this work: **GQA** and **CLEVR-Answers**
 
