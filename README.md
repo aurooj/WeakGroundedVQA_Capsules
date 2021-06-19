@@ -6,10 +6,10 @@ In this paper, we focus on a more relaxed setting: the grounding of relevant vis
 
 [[Paper](https://www.crcv.ucf.edu/wp-content/uploads/2018/11/Found-a-Reason-for-me.pdf)] [[Supplementary](https://www.crcv.ucf.edu/wp-content/uploads/2018/11/Found-a-Reason-for-me_Supp.pdf)] [[Presentation Video](https://www.crcv.ucf.edu/wp-content/uploads/2018/11/cvpr_2021_5min.mp4)] [[Poster](https://www.crcv.ucf.edu/wp-content/uploads/2018/11/cvpr21_poster_v2.pdf)]
 
-<!---
+
 ### Qualitative Results
-!to be added.
---->
+![gqa-qualitative](images/cvpr2021-qualitative-supp1.png)
+
 
 
 ### Requirements
