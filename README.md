@@ -77,11 +77,17 @@ python merge.py --name spatial
 ```
 
 Download data as instructed in MAC original code repo and copy it under the `mac-capsules/data/` folder. 
-Download GQA data files from [here](#-gqa) in the `mac-capsules/data/` folder.
+Download GQA data files from [here](#gqa) in the `mac-capsules/data/` folder.
 
 
 
 #### Training
+
+Run the following command to start training MAC-Capsules with 32 capsules for network length 4 on gqa dataset:
+```
+python main.py --expName "gqaExperiment-Spatial" --train --testedNum 10000  --epochs 25 --netLength 4 @configs/gqa/gqa_spatial.txt --writeDim 544 
+--NUM_VIS_CAPS_L1 32 --NUM_VIS_CAPS_L2 32
+```
 ##### Note
 `--WriteDim` depends on the number of capsules. 
 `--NUM_VIS_CAPS_L1` denotes the number of primary capsules.
@@ -93,11 +99,7 @@ for C=16, --writeDim=16x17=272
 for C=24, --writeDim=24x17=408
 for C=32, --writeDim=32x17=544
 ```
-Run the following command to start training MAC-Capsules with 32 capsules for network length 4 on gqa dataset:
-```
-python main.py --expName "gqaExperiment-Spatial" --train --testedNum 10000  --epochs 25 --netLength 4 @configs/gqa/gqa_spatial.txt --writeDim 544 
---NUM_VIS_CAPS_L1 32 --NUM_VIS_CAPS_L2 32
-```
+
 Code and details coming soon...
 
 ### Citation
