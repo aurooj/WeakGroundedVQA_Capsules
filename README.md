@@ -18,14 +18,15 @@ We use tensorflow 1.15.0, cuda version 10.1, with python 3.6.12 for our experime
 We recommend creating a conda environment to install libraries.
 Follow instructions from [SNMN](https://github.com/ronghanghu/snmn) for SNMN, and [MAC](https://github.com/stanfordnlp/mac-network/tree/master) code repos to setup the environments. 
 
-<!---or 
+or 
 #### for MAC
-`mac-capsules/environment.yml` file contains the conda environment packages used for MAC-Capsules.
+`mac-capsules/requirements.txt` file contains the conda environment packages used for MAC-Capsules.
 
 Inside mac-capsules directory, run the following to create a new environment named "tf15".
 ```
-conda env create -f environment.yml
+conda create --name tf15 python=3.6
 conda activate tf15
+pip install -r requirements.txt
 ```
 --->
 ### Datasets
