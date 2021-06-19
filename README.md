@@ -108,7 +108,7 @@ for C=24, --writeDim=24x17=408
 for C=32, --writeDim=32x17=544
 ```
 
-Code and details coming soon...
+Code and details for SNMN, MAC-CAPS for clevrAnswers coming soon...
 
 ### Citation
 If this work and/or dataset is useful for your research, please cite our paper.
