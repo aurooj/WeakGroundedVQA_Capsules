@@ -76,6 +76,15 @@ cd ../
 python merge.py --name spatial 
 ```
 
+Download data as instructed in MAC original code repo and copy it under the `mac-capsules/data/` folder. 
+Download GQA data files from [here](#-gqa) in the `mac-capsules/data/` folder.
+
+
+
+#### Training
+```
+python main.py --expName "gqaExperiment-Spatial" --train --testedNum 10000  --epochs 25 --netLength 4 @configs/gqa/gqa_spatial.txt --writeDim 
+```
 Code and details coming soon...
 
 ### Citation
