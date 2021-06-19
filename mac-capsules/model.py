@@ -953,7 +953,7 @@ class MACnet(object):
                                 imageFeatures = tf.reshape(imageFeatures, [-1, num_obj, 1, imageDim])
                             else:
                                 _, _, _, d = imageFeatures.get_shape().as_list()
-                                print(imageFeatures.get_shape().as_list())
+                                #print(imageFeatures.get_shape().as_list())
                                 imageFeatures = tf.reshape(imageFeatures, [-1, self.H, self.W, d])
                                 
                             #transform image features to capsules
