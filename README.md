@@ -13,12 +13,12 @@ In this paper, we focus on a more relaxed setting: the grounding of relevant vis
 
 
 ### Requirements
-We use tensorflow, cuda version 10.1 for our experiments. 
+We use tensorflow 1.15.0, cuda version 10.1, with python 3.6.12 for our experiments. 
 
 We recommend creating a conda environment to install libraries.
 Follow instructions from [SNMN](https://github.com/ronghanghu/snmn) for SNMN, and [MAC](https://github.com/stanfordnlp/mac-network/tree/master) code repos to setup the environments. 
 
-Todo: mention version dependencies
+`mac-capsules/requirements.txt` file contains the conda environment packages used for MAC-Capsules.
 
 ### Datasets
 We use two datasets in this work: **GQA** and **CLEVR-Answers**
