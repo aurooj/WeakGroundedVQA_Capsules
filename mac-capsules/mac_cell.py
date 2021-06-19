@@ -68,7 +68,7 @@ class MACCell(tf.nn.rnn_cell.RNNCell):
         self.questionCntxWords = questionCntxWords
         self.questionLengths = questionLengths
         knowledgeBase = tf.concat(knowledgeBase, axis=-1)
-        print(knowledgeBase.get_shape())
+        #print(knowledgeBase.get_shape())
         self.knowledgeBase = knowledgeBase
         self.kbSize = kbSize
 
@@ -604,8 +604,8 @@ class MACCell(tf.nn.rnn_cell.RNNCell):
         if config.initKBwithQ != "NON":
             if config.imageObjects:
                 self.knowledgeBase = ops.linear(self.knowledgeBase, config.imageDims[-1], config.writeDim, name = "initKB")
-                print('inside zero state..')
-                print(self.knowledgeBase.get_shape())
+                #print('inside zero state..')
+                #print(self.knowledgeBase.get_shape())
             else:
                 iVecQuestions = ops.linear(self.vecQuestions, config.ctrlDim, config.writeDim, name = "questions")
 
@@ -613,9 +613,9 @@ class MACCell(tf.nn.rnn_cell.RNNCell):
                 _, h, w, c, d = self.knowledgeBase.get_shape().as_list()
                 knowledgeBase = tf.reshape(self.knowledgeBase, [-1, h*w, c*d])
                 cnct, dim = ops.concat(knowledgeBase, iVecQuestions, config.writeDim, mul = concatMul, expandY = True)
-                print(cnct.get_shape())
+                #print(cnct.get_shape())
                 knowledgeBase = ops.linear(cnct, dim, config.writeDim, name = "initKB")
-                print(knowledgeBase.get_shape())
+                #print(knowledgeBase.get_shape())
                 self.knowledgeBase = tf.reshape(knowledgeBase, [-1, h, w, c, d])
                 
         ## initialize question words
