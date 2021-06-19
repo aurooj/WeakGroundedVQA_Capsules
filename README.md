@@ -82,8 +82,21 @@ Download GQA data files from [here](#-gqa) in the `mac-capsules/data/` folder.
 
 
 #### Training
+##### Note
+`--WriteDim` depends on the number of capsules. 
+`--NUM_VIS_CAPS_L1` denotes the number of primary capsules.
+`--NUM_VIS_CAPS_L2 ` denotes the number of visual capsules.
+For all experiments, we keep the same number of capsules in primary layer and visual capsule layer i.e., `NUM_VIS_CAPS_L1==NUM_VIS_CAPS_L2==C`. `--WriteDim` therefore is calculated as `Cx(KxK+1)`, where K is the pose dim with pose matrix of size KxK; Activations denote the additional dimension. 
+
+```Hence, 
+for C=16, --writeDim=16x17=272
+for C=24, --writeDim=24x17=408
+for C=32, --writeDim=32x17=544
 ```
-python main.py --expName "gqaExperiment-Spatial" --train --testedNum 10000  --epochs 25 --netLength 4 @configs/gqa/gqa_spatial.txt --writeDim 
+Run the following command to start training MAC-Capsules with 32 capsules for network length 4 on gqa dataset:
+```
+python main.py --expName "gqaExperiment-Spatial" --train --testedNum 10000  --epochs 25 --netLength 4 @configs/gqa/gqa_spatial.txt --writeDim 544 
+--NUM_VIS_CAPS_L1 32 --NUM_VIS_CAPS_L2 32
 ```
 Code and details coming soon...
 
