@@ -8,7 +8,7 @@ In this paper, we focus on a more relaxed setting: the grounding of relevant vis
 
 
 ### Qualitative Results
-![gqa-qualitative](images/cvpr2021-qualitative-supp1.png)
+![gqa-qualitative](images/qualitative-gqa.pdf)
 
 
 
