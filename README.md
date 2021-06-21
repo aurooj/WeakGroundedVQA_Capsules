@@ -20,6 +20,13 @@ Follow instructions from [SNMN](https://github.com/ronghanghu/snmn) for SNMN, an
 
 or 
 #### for MAC
+First, clone this project repo.
+
+```
+git clone https://github.com/aurooj/WeakGroundedVQA_Capsules.git
+cd mac-capsules
+```
+
 `mac-capsules/requirements.txt` file contains the conda environment packages used for MAC-Capsules.
 
 Inside mac-capsules directory, run the following to create a new environment named "tf15".
