@@ -92,7 +92,15 @@ cd ../
 python merge.py --name spatial 
 ```
 
-Download data as instructed in MAC original code repo and copy it under the `mac-capsules/data/` folder. 
+Download data for GQA balanced split and copy it under the `mac-capsules/data/` folder:
+```
+cd data
+wget https://nlp.stanford.edu/data/gqa/data1.2.zip
+unzip data1.2.zip
+wget http://nlp.stanford.edu/data/glove.6B.zip
+unzip glove.6B.zip
+cd ../
+```
 Download GQA data files from [here](https://1drv.ms/u/s!AtxSFigVVA5JhPUVHmUpAC7oI7wE5A?e=BX9sLA) and copy them in the `mac-capsules/data/` folder.
 
 
