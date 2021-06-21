@@ -31,8 +31,8 @@ cd mac-capsules
 
 Inside mac-capsules directory, run the following to create a new environment named "tf15".
 ```
-conda create --name tf15 python=3.6
-conda activate tf15
+conda create --name tf_gpu15 tensorflow-gpu=1.15
+conda activate tf_gpu15
 pip install -r requirements.txt
 ```
 We build upon [SNMN](https://github.com/ronghanghu/snmn) and [MAC](https://github.com/stanfordnlp/mac-network/tree/master) and thank them to provide awesome code repos. 
@@ -109,8 +109,7 @@ Download GQA data files from [here](https://1drv.ms/u/s!AtxSFigVVA5JhPUVHmUpAC7o
 
 Run the following command to start training MAC-Capsules with 32 capsules for network length 4 on gqa dataset:
 ```
-python main.py --expName "gqaExperiment-Spatial-32-capsules-4t" --train --testedNum 10000  --epochs 25 --netLength 4 @configs/gqa/gqa_spatial.txt --writeDim 544 
---NUM_VIS_CAPS_L1 32 --NUM_VIS_CAPS_L2 32
+python main.py --expName "gqaExperiment-Spatial-32-capsules-4t" --train --testedNum 10000  --epochs 25 --netLength 4 @configs/gqa/gqa_spatial.txt --writeDim 544   --NUM_VIS_CAPS_L1 32 --NUM_VIS_CAPS_L2 32
 ```
 ##### Note
 `--WriteDim` depends on the number of capsules. 
