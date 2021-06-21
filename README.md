@@ -93,7 +93,7 @@ python merge.py --name spatial
 ```
 
 Download data as instructed in MAC original code repo and copy it under the `mac-capsules/data/` folder. 
-Download GQA data files from [here](https://1drv.ms/u/s!AtxSFigVVA5JhPUVHmUpAC7oI7wE5A?e=BX9sLA) in the `mac-capsules/data/` folder.
+Download GQA data files from [here](https://1drv.ms/u/s!AtxSFigVVA5JhPUVHmUpAC7oI7wE5A?e=BX9sLA) and copy them in the `mac-capsules/data/` folder.
 
 
 
