@@ -36,7 +36,7 @@ six==1.15.0
 tensorboard==1.15.0
 tensorflow-estimator==1.15.1
 tensorflow-gpu==1.15.0
-termcolor==1.1.0
+termcolor
 tifffile==2020.9.3
 tqdm==4.48.2
 werkzeug==1.0.1
