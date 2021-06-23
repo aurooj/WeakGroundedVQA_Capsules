@@ -128,8 +128,11 @@ for C=32, --writeDim=32x17=544
 python main.py --expName "gqaExperiment-Spatial-32-capsules-4t" --finalTest --test --testAll --netLength 4 -r --getPreds --getAtt @configs/gqa/gqa_spatial.txt 
 --writeDim 544 --NUM_VIS_CAPS_L1 32 --NUM_VIS_CAPS_L2 32
 ```
-Code and details for SNMN, MAC-CAPS for clevrAnswers coming soon...
 
+Todo: 
+- [ ] Grounding evaluation code
+- [ ] Instructions for MAC-Capsules-clevrAnswers
+- [ ] SNMN-Capsules
 
 
 ### Citation
