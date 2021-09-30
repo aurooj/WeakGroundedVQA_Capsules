@@ -24,6 +24,13 @@ First, clone this project repo.
 
 ```
 git clone https://github.com/aurooj/WeakGroundedVQA_Capsules.git
+```
+Go to root directory.
+```
+cd WeakGroundedVQA_Capsules
+```
+For mac-capsules, go to mac-capsules directory.
+```
 cd mac-capsules
 ```
 
