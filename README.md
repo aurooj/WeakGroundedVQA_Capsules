@@ -82,6 +82,23 @@ GQA
 
 ```
 
+##### Format description for the grounding bounding box files such as `gqa_val_question_question2bboxes.json`
+The files in the format `gqa_val_<grounding_label_type>_question2bboxes.json` are ground truth object boxes saved for each `qid`.
+grounding_label_type can be one of the following: `all`, `question`, `answer`, `full_answer`. It basically tells which objects we want to evaluate grounding for.
+For more details, see caption of table 2 in the main paper.
+
+These files are obtained after processing gqa questions and scene_graphs information and follow the following format:
+```
+{qid1: {obj_id1: [x1, y1, w, h],
+        obj_id2: [x1, y1, w, h],
+       ..},
+
+ qid2: {...},
+.
+.
+.
+}
+```
 ### Baselines
 We integrate our capsule module into two baselines: SNMN and MAC. 
 MAC network was trained on both [CLEVR-Answers](https://github.com/stanfordnlp/mac-network/tree/master) and [GQA](https://github.com/stanfordnlp/mac-network/tree/gqa) datasets.
