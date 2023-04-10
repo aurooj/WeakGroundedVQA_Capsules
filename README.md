@@ -156,8 +156,10 @@ python main.py --expName "gqaExperiment-Spatial-32-capsules-4t" --finalTest --te
 #### Testing on custom dataset
 Follow instructions [here](https://github.com/aurooj/WeakGroundedVQA_Capsules/blob/main/custom_eval.md) to test on your custom dataset.
 
+#### Grounding Evaluation
+To generate detections from attention maps produced from MAC-network or MAC-Caps, follow the instructions [here](https://github.com/aurooj/WeakGroundedVQA_Capsules/blob/main/grounding_eval.md).
 Todo: 
-- [ ] Grounding evaluation code
+- [x] Grounding evaluation code
 - [ ] Instructions for MAC-Capsules-clevrAnswers
 - [ ] SNMN-Capsules
 
