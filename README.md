@@ -136,6 +136,9 @@ python main.py --expName "gqaExperiment-Spatial-32-capsules-4t" --finalTest --te
 --writeDim 544 --NUM_VIS_CAPS_L1 32 --NUM_VIS_CAPS_L2 32
 ```
 
+#### Testing on custom dataset
+Follow instructions [here](https://github.com/aurooj/WeakGroundedVQA_Capsules/blob/main/custom_eval.md) to test on your custom dataset.
+
 Todo: 
 - [ ] Grounding evaluation code
 - [ ] Instructions for MAC-Capsules-clevrAnswers
